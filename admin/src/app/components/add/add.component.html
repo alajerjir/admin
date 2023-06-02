@@ -1,0 +1,70 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Add Courses</h4>
+                        <p class="card-category">Courses details </p>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="onSubmit()" #courseform="ngForm">
+                            <div class="row">
+                                
+                                
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Title" type="text" [(ngModel)]="course.title">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Prix" type="number" [(ngModel)]="course.prix">
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder=" responsable Professor " type="text" [(ngModel)]="course.professorName">
+                                  </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Course duration" type="number" [(ngModel)]="course.duration" >
+                                  </mat-form-field>
+                                </div>
+                                <div class="col-md-12">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Course Level " type="text" [(ngModel)]="course.level">
+                                  </mat-form-field>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-md-4">
+                                   
+                                  <mat-form-field class="example-full-width">
+                                    <br>
+                                    <label > Course Image</label>
+                                    <input matInput  type="file" [(ngModel)]="course.imageLink">
+                                  </mat-form-field>
+                                </div>
+                               
+                                
+                               
+                                
+                            </div>
+                             
+                            <button mat-raised-button type="button" class="btn btn-primary pull-right" type="submit" [disabled]="!courseform.form.valid" >Add Course</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+    </div>
+  </div>
+  

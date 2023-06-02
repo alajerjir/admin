@@ -1,0 +1,86 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Courses Liste</h4>
+                        <p class="card-category">Edit Courses </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table" >
+                                <thead class=" text-primary" >
+                                    <th>
+                                        Title
+                                    </th>
+                                    <th>
+                                        Responsable Professor
+                                    </th>
+                                    <th>
+                                        Course Duration
+                                    </th>
+                                     <th>
+                                    Course Level
+                                    </th>
+                                  
+                                   
+                                </thead>
+                                <tbody *ngFor="let course of courses">
+                                    <tr>
+                                        <td>
+                                            
+                                            <b>
+                                         {{course.title}}
+
+
+                                        </b>
+                                     
+                                        </td>
+                                        <td>
+                                            <b>
+                                            {{course.professorName}}
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                            {{course.duration}}
+
+                                        </b>
+                        
+                                        </td>
+                                        <td>
+                                            <b>
+                                            {{course.level}}
+
+                                        </b>
+                        
+                                        </td>
+                                       
+                                        <td class="td-actions text-right">
+                                        
+                                          <button mat-raised-button type="button" matTooltip="Remove" [matTooltipPosition]="'above'" class="btn btn-danger btn-link btn-sm btn-just-icon" >
+                                              <i (click)="deleteCourse(course.id)" class="material-icons">close</i>
+                                          </button>
+                                          <button mat-raised-button type="button" matTooltip="Edit" [matTooltipPosition]="'above'" class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                              <i  class="material-icons" [routerLink]="['/update',course.id]">edit</i>
+                                          </button>
+                                      </td>
+                              
+                                    </tr>
+                                   
+                                    
+                                </tbody>    
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            
+                  
+      
+      
+        </div>
+    </div>
+  </div>
+  

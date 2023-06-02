@@ -1,0 +1,72 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-primary">
+                      <h4 class="card-title">Complete Professor Profile</h4>
+                      <p class="card-category"> Professor Profile</p>
+                  </div>
+                  <div class="card-body">
+                      <form (ngSubmit)="onSubmit()" #courseform="ngForm">
+                          <div class="row">
+                              
+                              
+                              <div class="col-md-4">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email address" type="email" [(ngModel)]="prof.email">
+                                  </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Fist Name" type="text" [(ngModel)]="prof.name">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Last Name" type="text" >
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Adress" type="text" >
+                                </mat-form-field>
+                              </div>
+                          </div> 
+                          <div class="row">
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Phone Number" type="number[20]" >
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Country" type="text">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="speciality" type="text" >
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <label> Prof CV</label>
+                                  <input matInput  type="file"  >
+                                </mat-form-field>
+                              </div>
+                          </div>
+                           
+                          <button mat-raised-button type="submit" class="btn btn-primary pull-right"  >Register Profile</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+         
+  </div>
+</div>
